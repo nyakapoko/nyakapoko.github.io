@@ -6,10 +6,19 @@
     <description>Recent content on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 30 Apr 2020 15:30:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 17:41:48 +0900</lastBuildDate>
     
 	<atom:link href="https://nyakapoko.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[9月入学] 社会への影響は“予測できない“</title>
+      <link>https://nyakapoko.github.io/post/04_think_conservative/</link>
+      <pubDate>Thu, 30 Apr 2020 17:41:48 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/post/04_think_conservative/</guid>
+      <description>9月入学案が検討されている コロナで学校教育が一部ストップしています． 学校の入学を4月から9月へ変更することで，カリキュラムの遅れへ対応する案</description>
+    </item>
     
     <item>
       <title>Hugo(erblog)でサムネイル画像を指定する</title>
