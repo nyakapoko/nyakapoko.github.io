@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nyakapoko.github.io/categories/</loc>
+    <lastmod>2020-04-30T15:30:52+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nyakapoko.github.io/tags/erblog/</loc>
     <lastmod>2020-04-30T15:30:52+09:00</lastmod>
   </url>
@@ -38,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://nyakapoko.github.io/categories/%E6%8A%80%E8%A1%93/</loc>
+    <lastmod>2020-04-30T15:30:52+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nyakapoko.github.io/post/02_school-september2/</loc>
     <lastmod>2020-04-30T11:38:03+09:00</lastmod>
   </url>
@@ -68,7 +78,8 @@
   </url>
   
   <url>
-    <loc>https://nyakapoko.github.io/categories/</loc>
+    <loc>https://nyakapoko.github.io/categories/%E8%80%83%E3%81%88%E6%96%B9/</loc>
+    <lastmod>2020-04-29T00:02:13+09:00</lastmod>
   </url>
   
 </urlset>
