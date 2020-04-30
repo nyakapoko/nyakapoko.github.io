@@ -1,0 +1,224 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>nyakapokoのブログ - Hugo(erblog)でサムネイル画像を指定する </title>
+
+    
+    
+    <meta content="tips, Hugo, erblog" name="keywords">
+    
+    <meta content="nyakapokoのブログ - このページについて Hugoのテーマerblog で作ってます． やりたいこと デフォルトだと，サムネイル画像は指定されていません．リンクを貼ったと" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93938196-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-93938196-3');
+        </script>
+    
+
+    
+    
+    <script type="text/javascript" async
+        src="/mathjax-3.0.0/tex-mml-chtml.js">
+    </script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    <link rel="stylesheet" async href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="/self/js/lazysizes.min.js" async></script> 
+
+<meta name="thumbnail" content="/self/img/logo.png"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/self/img/logo.png" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        nyakapokoのブログ
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="layui-elem-quote markdown-body single-title" >
+                    <h1>Hugo(erblog)でサムネイル画像を指定する</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-04-30</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/erblog/">
+            <span class="layui-badge" style="vertical-align: 2px;">erblog</span>
+        </a>
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="このページについて">このページについて</h1>
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a>のテーマ<a href="https://themes.gohugo.io/erblog/">erblog</a> で作ってます．</li>
+</ul>
+<h1 id="やりたいこと">やりたいこと</h1>
+<ul>
+<li>デフォルトだと，サムネイル画像は指定されていません．リンクを貼ったときにサムネイル画像がないと，ちょっと印象がイマイチだと思っています．そこで，このブログの各記事にサムネイル画像を指定しようと思います．</li>
+</ul>
+<p>※ ↓リンクなしの状態での引用ツイートの例（引用ありがとうございます！）
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">nyakapokoのブログ - コロナ休校を「9月入学」で解決しようとしたときの課題点  <a href="https://t.co/pz6TUWWsnk">https://t.co/pz6TUWWsnk</a></p>&mdash; mukidayo (@mukidayo) <a href="https://twitter.com/mukidayo/status/1255431196345016328?ref_src=twsrc%5Etfw">April 29, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<ul>
+<li>今回は，全ページで同じサムネイル画像を指定します．</li>
+<li>また，今回は，サムネイル画像として，ページのロゴ画像↓を使用します．</li>
+</ul>
+<figure>
+    <img src="./logo.png" width="150"/> 
+</figure>
+
+<h1 id="やったこと">やったこと</h1>
+<ol>
+<li>ロゴ画像ファイルを作り，<code>themes/erblog/static/self/img/logo.png</code> に置きます．</li>
+<li>ロゴ画像については，簡単な設定方法が用意されています．<code>config.toml</code>に書きを追加します．</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">Params</span>]
+	<span style="color:#a6e22e">logo</span> = <span style="color:#e6db74">&#34;/self/img/logo.png&#34;</span>
+</code></pre></div><ol start="3">
+<li><code>themes/erblog/layouts/partials/self-define-head.html</code>を編集します．</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;thumbnail&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{.Site.Params.logo}}&#34;</span>/&gt;
+</code></pre></div><p><code>.Site.Params.logo</code>には上で指定した<code>/self/img/log.png</code>が代入されます．</p>
+<p>※ erblogでは，<code>themes/erblog/layouts/partials/self-define-head.html</code>を編集することで，ユーザが独自にヘッダを追加できます．</p>
+<ol start="4">
+<li>上記で動くはずなんですが，動きませんでした．（初学者なので自信がないですが）<strong><code>themes/erblog/partials/head.html</code> の52行目に下記のバグがあるっぽいので修正します．</strong></li>
+</ol>
+<p>修正前：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    {{<span style="color:#f92672">-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;self-define-head.html&#34;</span> <span style="color:#f92672">-</span>}}
+</code></pre></div><p>修正後：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    {{<span style="color:#f92672">-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;self-define-head.html&#34;</span> . <span style="color:#f92672">-</span>}}
+</code></pre></div><p>つまり，<code>self-define-head.html</code>を探すパス<code>.</code>が抜けているようです．</p>
+<h1 id="結果">結果</h1>
+<p>例えば，iframelyでlinkをembedするとこんな感じになりました．</p>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/00_school-september/" data-iframely-url="//cdn.iframe.ly/qOfRr76"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/02_school-september2/" data-iframely-url="//cdn.iframe.ly/6cxOJcW"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+めでたしめでたし．</div>
+            </div>
+        </div>
+
+        
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <h1 class="single-title">Relevant Topics</h1>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/01_poweroint-shortcut/">
+                                <h2 class="">Powerpoint for Mac では、「テキストのみ保持」の貼り付けショートカットは設定できない</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-04-29</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/powerpoint/">
+            <span class="layui-badge" style="vertical-align: 2px;">powerpoint</span>
+        </a>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>
