@@ -58,6 +58,7 @@
 
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
 
 
 <link rel="stylesheet" href="https://nyakapoko.github.io/css/custom.css">
@@ -214,14 +215,19 @@ layui.use('element', function(){
     
     
 
-    <a href="fig1.jpg" target="_blank" rel="noopener noreferrer">
+    
+        <amp-image-lightbox
+            id="syncer"
+            layout="nodisplay"></amp-image-lightbox>
         <amp-img
             src="https://nyakapoko.github.io/post/00_school-september/fig1_hu5c164f60afd643aa34a72e7dca51754f_167898_620x0_resize_q75_lanczos.jpg" 
             width="620"  
             height="344" 
             layout="responsive" 
+            on="tap:syncer"
+            role="button"
             
-        >
+        tabindex>
         </amp-img>
     </a>
 </figure>
@@ -298,14 +304,19 @@ layui.use('element', function(){
     
     
 
-    <a href="fig1.png" target="_blank" rel="noopener noreferrer">
+    
+        <amp-image-lightbox
+            id="syncer"
+            layout="nodisplay"></amp-image-lightbox>
         <amp-img
             src="https://nyakapoko.github.io/post/00_school-september/fig1_hucc139ea7ec456ae540c89a0406044404_425476_620x0_resize_lanczos_2.png" 
             width="620"  
             height="344" 
             layout="responsive" 
+            on="tap:syncer"
+            role="button"
             
-        >
+        tabindex>
         </amp-img>
     </a>
 </figure>

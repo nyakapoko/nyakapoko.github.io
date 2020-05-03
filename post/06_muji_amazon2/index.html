@@ -58,6 +58,7 @@
 
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
 
 
 <link rel="stylesheet" href="https://nyakapoko.github.io/css/custom.css">
@@ -153,13 +154,13 @@ layui.use('element', function(){
 </h3>
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
-                    <h1 id="無印良品が-amazon-で販売開始">無印良品が Amazon で販売開始！</h1>
+                    <h2 id="無印良品が-amazon-で販売開始">無印良品が Amazon で販売開始！</h2>
 <p>無印良品が Amazon での販売を開始し，話題になっています．
 私も，昨日紹介記事を書きました．</p>
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/05_muji_amazon/" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fnyakapoko.github.io%2Fpost%2F05_muji_amazon%2F&amp;key=20018cd17c211e24973982bc83ba422e"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 <br>
 <p>記事の中で，<strong>Amazonでの価格と，無印良品オンラインストアの価格は同じ</strong>のようだ，と書きました．</p>
-<h1 id="amazonの無印良品は高いという声も">「Amazonの無印良品は高い」という声も…</h1>
+<h2 id="amazonの無印良品は高いという声も">「Amazonの無印良品は高い」という声も…</h2>
 <p>一方で，「Amazonの無印良品は高い」という方もいるようです．
 実際，Amazonの無印良品には，高いものと安いものの両方があるようです．
 <strong>Amazonで無印良品を安く買うためにはどうすればよいか</strong>，紹介します．</p>
@@ -169,7 +170,7 @@ layui.use('element', function(){
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">amazonで無印の商品ざ買えるようになったとのことで検索したらどれもずいぶんとお高い。あれれ？</p>&mdash; とりはつあめめ (@torihatuameme) <a href="https://twitter.com/torihatuameme/status/1256246853600858112?ref_src=twsrc%5Etfw">May 1, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </p>
-<h1 id="販売出品が無印良品以外の会社だと高い">「販売/出品」が無印良品以外の会社だと高い</h1>
+<h2 id="販売出品が無印良品以外の会社だと高い">「販売/出品」が無印良品以外の会社だと高い</h2>
 <p>Amazonには，実は2種類の無印良品の商品があります．</p>
 <ol>
 <li>「販売/出品」がAmazon</li>
@@ -225,21 +226,26 @@ layui.use('element', function(){
     
     
 
-    <a href="comparison.png" target="_blank" rel="noopener noreferrer">
+    
+        <amp-image-lightbox
+            id="syncer"
+            layout="nodisplay"></amp-image-lightbox>
         <amp-img
             src="https://nyakapoko.github.io/post/06_muji_amazon2/comparison_huf6122a8e01ee7e12ee3f77fc7e173847_425172_620x0_resize_lanczos_2.png" 
             width="620"  
             height="400" 
             layout="responsive" 
+            on="tap:syncer"
+            role="button"
             
-        >
+        tabindex>
         </amp-img>
     </a>
 </figure>
 
 <p>実は，最近話題になったのは，1.の無印良品の商品について，<strong>Amazonが直売を開始した</strong>というニュースでした（やった！）．
 2.の商品は，以前から販売されていた（けど高かった）ということです．</p>
-<h1 id="安い商品の選び方">安い商品の選び方</h1>
+<h2 id="安い商品の選び方">安い商品の選び方</h2>
 <!-- では，Amazonで無印良品を安く買うためにはどうすれば良いでしょうか． -->
 <p>どうせなら，最初から，1.の安い商品だけを検索したいですよね．そのためにはどうすれば良いでしょうか．
 実は，下記のような，普通の方法で商品を調べると，高い商品も表示されてしまいます．</p>
@@ -286,14 +292,19 @@ layui.use('element', function(){
     
     
 
-    <a href="expensive.png" target="_blank" rel="noopener noreferrer">
+    
+        <amp-image-lightbox
+            id="syncer"
+            layout="nodisplay"></amp-image-lightbox>
         <amp-img
             src="https://nyakapoko.github.io/post/06_muji_amazon2/expensive_hu848e90ef663853fd66580d9773ae9457_1056185_620x0_resize_lanczos_2.png" 
             width="620"  
             height="251" 
             layout="responsive" 
+            on="tap:syncer"
+            role="button"
             
-        >
+        tabindex>
         </amp-img>
     </a>
 </figure>
@@ -333,20 +344,25 @@ layui.use('element', function(){
     
     
 
-    <a href="cheap.png" target="_blank" rel="noopener noreferrer">
+    
+        <amp-image-lightbox
+            id="syncer"
+            layout="nodisplay"></amp-image-lightbox>
         <amp-img
             src="https://nyakapoko.github.io/post/06_muji_amazon2/cheap_hua22a687efe935b9fa43317a45cf345f5_569126_620x0_resize_lanczos_2.png" 
             width="620"  
             height="232" 
             layout="responsive" 
+            on="tap:syncer"
+            role="button"
             
-        >
+        tabindex>
         </amp-img>
     </a>
 </figure>
 
 <p>ということで，<a href="https://amzn.to/3fdVPwy">Amazonの無印良品専用ページ</a>から検索しましょう！</p>
-<h1 id="売れ筋ランキング">売れ筋ランキング</h1>
+<h2 id="売れ筋ランキング">売れ筋ランキング</h2>
 <!-- ちなみに，現段階では，安い無印良品の扱いは250商品と少なめです．	 -->
 <p>昨日の記事を書いてから，早速売れ筋に変化があったので，載せておきますね．</p>
 <h4 id="1位エイジングケア化粧水高保湿タイプ-200ml">1位：エイジングケア化粧水・高保湿タイプ 200ml</h4>

@@ -58,6 +58,7 @@
 
 
 <script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
 
 
 <link rel="stylesheet" href="https://nyakapoko.github.io/css/custom.css">
@@ -153,11 +154,11 @@ layui.use('element', function(){
 </h3>
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
-                    <h1 id="このブログについて">このブログについて</h1>
+                    <h2 id="このブログについて">このブログについて</h2>
 <ul>
 <li><a href="https://gohugo.io/">Hugo</a>のテーマ<a href="https://themes.gohugo.io/erblog/">erblog</a> で作ってます．</li>
 </ul>
-<h1 id="やりたいこと">やりたいこと</h1>
+<h2 id="やりたいこと">やりたいこと</h2>
 <ul>
 <li>erblogのテーマは，デフォルトでは，サムネイル画像は指定されていません．リンクを貼ったときにサムネイル画像がないと，ちょっと印象がイマイチだと思っています．そこで，このブログの各記事にサムネイル画像を指定しようと思います．</li>
 </ul>
@@ -177,7 +178,7 @@ layui.use('element', function(){
     <img src="./logo.png" width="150"/> 
 </figure>
 
-<h1 id="やったこと">やったこと</h1>
+<h2 id="やったこと">やったこと</h2>
 <ol>
 <li>ロゴ画像ファイルを作り，<code>themes/erblog/static/self/img/logo.png</code> に置きます．</li>
 <li>ロゴ画像については，簡単な設定方法が用意されています．<code>config.toml</code>に書きを追加します．</li>
@@ -198,7 +199,7 @@ layui.use('element', function(){
 </code></pre></div><p>修正後：</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">    {{<span style="color:#f92672">-</span> <span style="color:#a6e22e">partial</span> <span style="color:#e6db74">&#34;self-define-head.html&#34;</span> . <span style="color:#f92672">-</span>}}
 </code></pre></div><p>つまり，<code>self-define-head.html</code>を探すパス<code>.</code>が抜けているようです．</p>
-<h1 id="結果">結果</h1>
+<h2 id="結果">結果</h2>
 <p>例えば，iframelyでlinkをembedするとこんな感じになりました．（twitterはサーバのキャッシュのせいか，まだ画像が表示されるようにならない…）</p>
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/00_school-september/" data-iframely-url="//cdn.iframe.ly/qOfRr76"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 <div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/02_school-september2/" data-iframely-url="//cdn.iframe.ly/6cxOJcW"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
