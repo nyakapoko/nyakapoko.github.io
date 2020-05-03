@@ -1,0 +1,330 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>nyakapokoのブログ - Hugoでページごとにアイキャッチ画像を指定する </title>
+
+    
+    
+    <meta content="アイキャッチ画像, Hugo, 技術" name="keywords">
+    
+    <meta content="nyakapokoのブログ - やりたいこと このブログの投稿にアイキャッチ画像を指定したい． 使う画像↓ やったこと概要 markdownファイルにアイキャッチ画像の相対パスを設" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93938196-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-93938196-3');
+        </script>
+    
+
+    
+    
+    <script type="text/javascript" async
+        src="/mathjax-3.0.0/tex-mml-chtml.js">
+    </script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.min.css">
+    
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    <link rel="stylesheet" async href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <script src="/self/js/lazysizes.min.js" async></script> 
+
+<meta name="thumbnail" content="https://nyakapoko.github.io/img/logo.png"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="og:title" content="Hugoでページごとにアイキャッチ画像を指定する" />
+<meta name="og:description" content="やりたいこと このブログの投稿にアイキャッチ画像を指定したい． 使う画像↓ やったこと概要 markdownファイルにアイキャッチ画像の相対パスを設" />
+<meta name="og:image" content="https://nyakapoko.github.io/img/logo.png" />
+<meta name="twitter:url" content="https://nyakapoko.github.io/post/08_eyecatch_eachpage/" />
+<meta name="twitter:site" content="@nyakapoko1" />
+<meta name="twitter:creator" content="@nyakapoko1" /> 
+
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+
+
+
+
+
+<script data-ad-client="ca-pub-6813906514142019" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/self/img/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        nyakapokoのブログ
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">全記事</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">全記事</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="layui-elem-quote markdown-body single-title" >
+                    <h1>Hugoでページごとにアイキャッチ画像を指定する</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f/">
+            <span class="layui-badge" style="vertical-align: 2px;">アイキャッチ画像</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="やりたいこと">やりたいこと</h1>
+<ul>
+<li><a href="https://nyakapoko.github.io/post/07_monospace_browser/">このブログの投稿</a>にアイキャッチ画像を指定したい．</li>
+</ul>
+<p>使う画像↓
+
+
+
+<div class="eyecatch" style="text-align:center;margin-top:-10px;margin-bottom:50px;">
+  <img
+    src="/img/07_eyecatch.jpg"
+    alt=""
+    decoding="async"
+    width="70%"
+    style="box-shadow:0 0 1px gray;"
+  />
+</div></p>
+<h1 id="やったこと概要">やったこと概要</h1>
+<ul>
+<li>markdownファイルにアイキャッチ画像の相対パスを設定する．</li>
+<li>htmlのヘッド部分でパスを読み取り指定する．</li>
+</ul>
+<h3 id="1-アイキャッチ画像を用意する">1. アイキャッチ画像を用意する.</h3>
+<p>上の画像は<a href="https://www.canva.com/">canva</a>で用意しました．この画像を<code>static/img/eyecatch.jpg</code>に置きます．</p>
+<h3 id="2-markdownファイルにアイキャッチ画像の相対パスを設定する">2. markdownファイルにアイキャッチ画像の相対パスを設定する．</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">---
+title: &#34;monospaceはChromeとSafariでかなり違う&#34;
+date: 2020-05-04T00:38:20+09:00
+draft: false
+categories: [&#39;技術&#39;]
+tags: [&#39;フォント&#39;,&#39;ブラウザ&#39;,&#39;Hugo&#39;,&#39;tips&#39;]
+eyecatch: &#39;/img/07_eyecatch.jpg&#39;
+---
+</code></pre></div><p>最後の一行で，アイキャッチ画像への相対パスを記載しています．</p>
+<h3 id="3-htmlのヘッド部分にアイキャッチのパスを記載する">3. htmlのヘッド部分にアイキャッチのパスを記載する．</h3>
+<p>このテーマ(erblog)では，htmlのヘッドを編集するためのファイルは， <code>themes/erblog/layouts/partials/self-define-head.html</code> です．このファイルに，下記を記載します．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- thumbnailの設定 --&gt;</span>
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;thumbnail&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ if ( and (.IsPage) (.Params.eyecatch) )}}{{ .Site.BaseURL }}{{ .Params.eyecatch }}{{ else }}https://nyakapoko.github.io/img/logo.png{{ end }}&#34;</span>/&gt;
+
+<span style="color:#75715e">&lt;!-- twitter等用の設定 --&gt;</span>
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;og:image&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ if ( and (.IsPage) (.Params.eyecatch) )}}{{ .Site.BaseURL }}{{ .Params.eyecatch }}{{ else }}https://nyakapoko.github.io/img/logo.png{{ end }}&#34;</span> /&gt;
+</code></pre></div><p>if文により，下記が成立しない場合はデフォルトとしてロゴ画像（<code>/img/logo.png</code>）を指定するようにしています．</p>
+<ul>
+<li>コンテンツのページである (.IsPage)</li>
+<li>markdownファイルでeyecatchのパスが設定されている（.Params.eyecatch）</li>
+</ul>
+<h1 id="結果">結果</h1>
+<p>無事，アイキャッチ画像が表示されるようになりました↓</p>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://nyakapoko.github.io/post/07_monospace_browser/" data-iframely-url="//cdn.iframe.ly/QQU4bBh?iframe=card-small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<p>めでたしめでたし．</p>
+
+
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/share?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f08_eyecatch_eachpage%2f&text=Hugo%e3%81%a7%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%94%e3%81%a8%e3%81%ab%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b" target="_blank" title="Tweet"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f08_eyecatch_eachpage%2f&title=Hugo%e3%81%a7%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%94%e3%81%a8%e3%81%ab%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fnyakapoko.github.io%2fpost%2f08_eyecatch_eachpage%2f&t=Hugo%e3%81%a7%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%94%e3%81%a8%e3%81%ab%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f08_eyecatch_eachpage%2f&title=Hugo%e3%81%a7%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%94%e3%81%a8%e3%81%ab%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%99%e3%82%8b" target="_blank" title="pocket"><i class="fa fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nyakapokos" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+            </div>
+        </div>
+
+        
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <h1 class="single-title">Relevant Topics</h1>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/07_monospace_browser/">
+                                <h2 class="">monospaceはChromeとSafariでかなり違う</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88/">
+            <span class="layui-badge" style="vertical-align: 2px;">フォント</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブラウザ</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/03_hugo_erblog_thumbnail/">
+                                <h2 class="">Hugo(erblog)でサムネイル画像を指定する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-04-30</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/erblog/">
+            <span class="layui-badge" style="vertical-align: 2px;">erblog</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>
