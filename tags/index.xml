@@ -6,7 +6,7 @@
     <description>Recent content in Tags on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 04 May 2020 01:33:50 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 12:08:33 +0900</lastBuildDate>
     
 	<atom:link href="https://nyakapoko.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Hugo</title>
       <link>https://nyakapoko.github.io/tags/hugo/</link>
-      <pubDate>Mon, 04 May 2020 01:33:50 +0900</pubDate>
+      <pubDate>Mon, 04 May 2020 12:08:33 +0900</pubDate>
       
       <guid>https://nyakapoko.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iframely</title>
+      <link>https://nyakapoko.github.io/tags/iframely/</link>
+      <pubDate>Mon, 04 May 2020 12:08:33 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/tags/iframely/</guid>
       <description></description>
     </item>
     

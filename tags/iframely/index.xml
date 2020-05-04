@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iframely on nyakapokoのブログ</title>
+    <link>https://nyakapoko.github.io/tags/iframely/</link>
+    <description>Recent content in iframely on nyakapokoのブログ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Mon, 04 May 2020 12:08:33 +0900</lastBuildDate>
+    
+	<atom:link href="https://nyakapoko.github.io/tags/iframely/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iframelyでURLをまとめて埋め込む</title>
+      <link>https://nyakapoko.github.io/post/09_iframely_multi/</link>
+      <pubDate>Mon, 04 May 2020 12:08:33 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/post/09_iframely_multi/</guid>
+      <description>やりたいこと このサイトでは，URLの埋め込みにiframelyを使っています． 複数のURLを埋め込みたいとき，一つ一つブラウザにコピーしてク</description>
+    </item>
+    
+  </channel>
+</rss>
