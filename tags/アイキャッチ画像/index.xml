@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>アイキャッチ画像 on nyakapokoのブログ</title>
-    <link>https://nyakapoko.github.ico/tags/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E7%94%BB%E5%83%8F/</link>
+    <link>https://nyakapoko.github.io/tags/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E7%94%BB%E5%83%8F/</link>
     <description>Recent content in アイキャッチ画像 on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 04 May 2020 01:33:50 +0900</lastBuildDate>
     
-	<atom:link href="https://nyakapoko.github.ico/tags/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E7%94%BB%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nyakapoko.github.io/tags/%E3%82%A2%E3%82%A4%E3%82%AD%E3%83%A3%E3%83%83%E3%83%81%E7%94%BB%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugoでページごとにアイキャッチ画像を指定する</title>
-      <link>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</link>
+      <link>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</link>
       <pubDate>Mon, 04 May 2020 01:33:50 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</guid>
+      <guid>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</guid>
       <description>やりたいこと このブログの投稿にアイキャッチ画像を指定したい． 使う画像↓ やったこと概要 markdownファイルにアイキャッチ画像の相対パスを設</description>
     </item>
     
