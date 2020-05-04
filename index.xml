@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nyakapokoのブログ</title>
-    <link>https://nyakapoko.github.io/</link>
+    <link>https://nyakapoko.github.ico/</link>
     <description>Recent content on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 04 May 2020 01:33:50 +0900</lastBuildDate>
     
-	<atom:link href="https://nyakapoko.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nyakapoko.github.ico/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugoでページごとにアイキャッチ画像を指定する</title>
-      <link>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</link>
+      <link>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</link>
       <pubDate>Mon, 04 May 2020 01:33:50 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</guid>
+      <guid>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</guid>
       <description>やりたいこと このブログの投稿にアイキャッチ画像を指定したい． 使う画像↓ やったこと概要 markdownファイルにアイキャッチ画像の相対パスを設</description>
     </item>
     
     <item>
       <title>monospaceフォントはChromeとSafariでかなり違う</title>
-      <link>https://nyakapoko.github.io/post/07_monospace_browser/</link>
+      <link>https://nyakapoko.github.ico/post/07_monospace_browser/</link>
       <pubDate>Mon, 04 May 2020 00:38:20 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/07_monospace_browser/</guid>
+      <guid>https://nyakapoko.github.ico/post/07_monospace_browser/</guid>
       <description>デフォルトフォントはブラウザ依存 ChromeやSafari等のブラウザは，それぞれデフォルトのフォント設定があります． デフォルトのフォントに</description>
     </item>
     
     <item>
       <title>無印良品をamazonから安く買う方法</title>
-      <link>https://nyakapoko.github.io/post/06_muji_amazon2/</link>
+      <link>https://nyakapoko.github.ico/post/06_muji_amazon2/</link>
       <pubDate>Sat, 02 May 2020 16:02:17 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/06_muji_amazon2/</guid>
+      <guid>https://nyakapoko.github.ico/post/06_muji_amazon2/</guid>
       <description>無印良品が Amazon で販売開始！ 無印良品が Amazon での販売を開始し，話題になっています． 私も，昨日紹介記事を書きました． 記事の中で，Amazonでの価格と</description>
     </item>
     
     <item>
       <title>無印良品が amazon での販売を開始</title>
-      <link>https://nyakapoko.github.io/post/05_muji_amazon/</link>
+      <link>https://nyakapoko.github.ico/post/05_muji_amazon/</link>
       <pubDate>Fri, 01 May 2020 22:56:33 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/05_muji_amazon/</guid>
+      <guid>https://nyakapoko.github.ico/post/05_muji_amazon/</guid>
       <description>無印良品が Amazon で販売開始！ 無印良品が Amazon での販売を開始し，話題になっています． 背景には，やはりコロナによる店舗の営業自粛の影響があるようです． 無</description>
     </item>
     
     <item>
       <title>[9月入学] 社会への影響は“予測できない“</title>
-      <link>https://nyakapoko.github.io/post/04_think_conservative/</link>
+      <link>https://nyakapoko.github.ico/post/04_think_conservative/</link>
       <pubDate>Thu, 30 Apr 2020 17:41:48 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/04_think_conservative/</guid>
+      <guid>https://nyakapoko.github.ico/post/04_think_conservative/</guid>
       <description>9月入学案が検討されている コロナで学校教育が一部ストップしています． 学校の入学を4月から9月へ変更することで，カリキュラムの遅れへ対応する案</description>
     </item>
     
     <item>
       <title>Hugo(erblog)でサムネイル画像を指定する</title>
-      <link>https://nyakapoko.github.io/post/03_hugo_erblog_thumbnail/</link>
+      <link>https://nyakapoko.github.ico/post/03_hugo_erblog_thumbnail/</link>
       <pubDate>Thu, 30 Apr 2020 15:30:52 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/03_hugo_erblog_thumbnail/</guid>
+      <guid>https://nyakapoko.github.ico/post/03_hugo_erblog_thumbnail/</guid>
       <description>このブログについて Hugoのテーマerblog で作ってます． やりたいこと erblogのテーマは，デフォルトでは，サムネイル画像は指定されてい</description>
     </item>
     
     <item>
       <title>[9月入学]前川喜平さんとほぼ同じ意見でした</title>
-      <link>https://nyakapoko.github.io/post/02_school-september2/</link>
+      <link>https://nyakapoko.github.ico/post/02_school-september2/</link>
       <pubDate>Thu, 30 Apr 2020 11:38:03 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/02_school-september2/</guid>
+      <guid>https://nyakapoko.github.ico/post/02_school-september2/</guid>
       <description>以前，このブログで，話題の「9月入学制度」は難しいんじゃないか，ということを書きました． 学年の平均年齢が0.5歳上昇するけど，本当にそれでい</description>
     </item>
     
     <item>
       <title>Powerpoint for Mac では、「テキストのみ保持」の貼り付けショートカットは設定できない</title>
-      <link>https://nyakapoko.github.io/post/01_poweroint-shortcut/</link>
+      <link>https://nyakapoko.github.ico/post/01_poweroint-shortcut/</link>
       <pubDate>Wed, 29 Apr 2020 00:02:13 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/01_poweroint-shortcut/</guid>
+      <guid>https://nyakapoko.github.ico/post/01_poweroint-shortcut/</guid>
       <description>困ったこと プレゼン資料を作っていた． Skimで開いたPDFからpowerpointへ、テキストを貼り付けようとした． なぜか「上付き」の書式が</description>
     </item>
     
     <item>
       <title>コロナ休校を「9月入学」で解決しようとしたときの課題点</title>
-      <link>https://nyakapoko.github.io/post/00_school-september/</link>
+      <link>https://nyakapoko.github.ico/post/00_school-september/</link>
       <pubDate>Wed, 29 Apr 2020 00:02:13 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/00_school-september/</guid>
+      <guid>https://nyakapoko.github.ico/post/00_school-september/</guid>
       <description>コロナ休校と「9月入学」 新型コロナの影響で休校期間が長引いており，カリキュラムへの影響が懸念されています．対応として，新入学と新学期のスター</description>
     </item>
     

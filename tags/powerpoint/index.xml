@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>powerpoint on nyakapokoのブログ</title>
-    <link>https://nyakapoko.github.io/tags/powerpoint/</link>
+    <link>https://nyakapoko.github.ico/tags/powerpoint/</link>
     <description>Recent content in powerpoint on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Wed, 29 Apr 2020 00:02:13 +0900</lastBuildDate>
     
-	<atom:link href="https://nyakapoko.github.io/tags/powerpoint/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nyakapoko.github.ico/tags/powerpoint/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Powerpoint for Mac では、「テキストのみ保持」の貼り付けショートカットは設定できない</title>
-      <link>https://nyakapoko.github.io/post/01_poweroint-shortcut/</link>
+      <link>https://nyakapoko.github.ico/post/01_poweroint-shortcut/</link>
       <pubDate>Wed, 29 Apr 2020 00:02:13 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/01_poweroint-shortcut/</guid>
+      <guid>https://nyakapoko.github.ico/post/01_poweroint-shortcut/</guid>
       <description>困ったこと プレゼン資料を作っていた． Skimで開いたPDFからpowerpointへ、テキストを貼り付けようとした． なぜか「上付き」の書式が</description>
     </item>
     

@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技術 on nyakapokoのブログ</title>
-    <link>https://nyakapoko.github.io/categories/%E6%8A%80%E8%A1%93/</link>
+    <link>https://nyakapoko.github.ico/categories/%E6%8A%80%E8%A1%93/</link>
     <description>Recent content in 技術 on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 04 May 2020 01:33:50 +0900</lastBuildDate>
     
-	<atom:link href="https://nyakapoko.github.io/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nyakapoko.github.ico/categories/%E6%8A%80%E8%A1%93/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugoでページごとにアイキャッチ画像を指定する</title>
-      <link>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</link>
+      <link>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</link>
       <pubDate>Mon, 04 May 2020 01:33:50 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/08_eyecatch_eachpage/</guid>
+      <guid>https://nyakapoko.github.ico/post/08_eyecatch_eachpage/</guid>
       <description>やりたいこと このブログの投稿にアイキャッチ画像を指定したい． 使う画像↓ やったこと概要 markdownファイルにアイキャッチ画像の相対パスを設</description>
     </item>
     
     <item>
       <title>monospaceフォントはChromeとSafariでかなり違う</title>
-      <link>https://nyakapoko.github.io/post/07_monospace_browser/</link>
+      <link>https://nyakapoko.github.ico/post/07_monospace_browser/</link>
       <pubDate>Mon, 04 May 2020 00:38:20 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/07_monospace_browser/</guid>
+      <guid>https://nyakapoko.github.ico/post/07_monospace_browser/</guid>
       <description>デフォルトフォントはブラウザ依存 ChromeやSafari等のブラウザは，それぞれデフォルトのフォント設定があります． デフォルトのフォントに</description>
     </item>
     
     <item>
       <title>Hugo(erblog)でサムネイル画像を指定する</title>
-      <link>https://nyakapoko.github.io/post/03_hugo_erblog_thumbnail/</link>
+      <link>https://nyakapoko.github.ico/post/03_hugo_erblog_thumbnail/</link>
       <pubDate>Thu, 30 Apr 2020 15:30:52 +0900</pubDate>
       
-      <guid>https://nyakapoko.github.io/post/03_hugo_erblog_thumbnail/</guid>
+      <guid>https://nyakapoko.github.ico/post/03_hugo_erblog_thumbnail/</guid>
       <description>このブログについて Hugoのテーマerblog で作ってます． やりたいこと erblogのテーマは，デフォルトでは，サムネイル画像は指定されてい</description>
     </item>
     
