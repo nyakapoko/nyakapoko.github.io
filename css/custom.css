@@ -1,3 +1,11 @@
+#TableOfContents{
+  color:#0366d6;
+  line-height: 1.5;
+  font-family: "Hiragino Sans", "ヒラギノ角ゴ Pro W3", "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, 'メイリオ', Meiryo, "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 .expand-fig {
   /*padding:0px 0px;*/
   /*margin-block-start:0em;*/

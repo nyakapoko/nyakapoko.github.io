@@ -168,6 +168,7 @@ layui.use('element', function(){
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
                     
+                    
 
 
 <div class="eyecatch" style="text-align:center;margin-top:-10px;margin-bottom:50px;">
@@ -301,8 +302,8 @@ layui.use('element', function(){
 <ul>
 <li>こんなスクリプトを書きます．</li>
 </ul>
-<p>embed_url.py:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:embed_url.py" data-lang="python:embed_url.py"><span style="color:#f92672">import</span> requests
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#embed_url.py</span>
+<span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> json
 <span style="color:#f92672">import</span> sys
 
@@ -339,11 +340,12 @@ layui.use('element', function(){
 <h3 id="4-実行">4. 実行</h3>
 <p>同じディレクトリにURLのリストファイルを作成します．</p>
 <p>url.list:</p>
-<pre><code class="language-:url.list" data-lang=":url.list">https://nyakapoko.github.io/post/00_school-september/
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># url.list</span>
+https://nyakapoko.github.io/post/00_school-september/
 https://nyakapoko.github.io/post/01_poweroint-shortcut/
 https://nyakapoko.github.io/post/02_school-september2/
-</code></pre><p>URLリストファイルを上のスクリプトと同じディレクトリにおいて，pythonを実行します．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python embed_url.py url.list
+</code></pre></div><p>URLリストファイルを上のスクリプトと同じディレクトリにおいて，pythonを実行します．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ python embed_url.py url.list
 </code></pre></div><p>エラーが出たら，パッケージをインストールします．</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pip install requests
 $ pip install json
