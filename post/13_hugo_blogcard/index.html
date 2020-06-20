@@ -1,0 +1,712 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>nyakapokoのブログ - Hugoでレスポンシブなブログカードを作成する </title>
+
+    
+    
+    <meta content="Hugo, ブログカード, 技術" name="keywords">
+    
+    <meta content="nyakapokoのブログ - やりたいこと Hugo でブログカードを作成したい レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい） レスポンシブなブ" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93938196-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-93938196-3');
+        </script>
+    
+
+    
+    
+    <script type="text/javascript" async
+        src="/mathjax-3.0.0/tex-mml-chtml.js">
+    </script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.min.css">
+    
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    <link rel="stylesheet" async href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <script src="/self/js/lazysizes.min.js" async></script> 
+
+<meta name="thumbnail" content="https://nyakapoko.github.io/post/13_hugo_blogcard/eyecatch.jpg"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="og:title" content="Hugoでレスポンシブなブログカードを作成する" />
+<meta name="og:description" content="やりたいこと Hugo でブログカードを作成したい レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい） レスポンシブなブ" />
+<meta name="og:image" content="https://nyakapoko.github.io/post/13_hugo_blogcard/eyecatch.jpg" />
+<meta name="twitter:url" content="https://nyakapoko.github.io/post/13_hugo_blogcard/" />
+<meta name="twitter:site" content="@nyakapoko1" />
+<meta name="twitter:creator" content="@nyakapoko1" /> 
+
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+
+
+
+
+
+<script data-ad-client="ca-pub-6813906514142019" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/self/img/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        nyakapokoのブログ
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">全記事</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E6%8A%80%E8%A1%93">技術</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E8%80%83%E3%81%88%E6%96%B9">考え方</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">全記事</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a></dd>
+                    
+                        <dd><a href="/categories/%E6%8A%80%E8%A1%93">技術</a></dd>
+                    
+                        <dd><a href="/categories/%E8%80%83%E3%81%88%E6%96%B9">考え方</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="layui-elem-quote markdown-body single-title" >
+                    <h1>Hugoでレスポンシブなブログカードを作成する</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-06-20</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブログカード</span>
+        </a>
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2>目次<h2><nav id="TableOfContents">
+  <ul>
+    <li><a href="#やりたいこと">やりたいこと</a></li>
+    <li><a href="#やったこと">やったこと</a>
+      <ul>
+        <li><a href="#1-ogpを取得するサーバを作成する">1. OGPを取得するサーバを作成する</a></li>
+        <li><a href="#2-blogcard用のshortcodeを作成する">2. blogcard用のshortcodeを作成する</a></li>
+        <li><a href="#3-レスポンシブなブログカード用にcssを設定">3. レスポンシブなブログカード用にCSSを設定</a></li>
+        <li><a href="#4-記事内でショートコードを使用する">4. 記事内でショートコードを使用する</a></li>
+      </ul>
+    </li>
+    <li><a href="#iframelyは利用を中断">iframelyは利用を中断</a></li>
+    <li><a href="#今後の課題">今後の課題</a></li>
+  </ul>
+</nav>
+                    
+
+
+<div class="eyecatch" style="text-align:center;margin-top:-10px;margin-bottom:50px;">
+  <img
+    src="/img/13_eyecatch.jpg"
+    alt=""
+    decoding="async"
+    width="70%"
+    style="box-shadow:0 0 1px gray;"
+  />
+</div>
+<h2 id="やりたいこと">やりたいこと</h2>
+<ul>
+<li>Hugo でブログカードを作成したい</li>
+<li>レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい）</li>
+</ul>
+<p>レスポンシブなブログカードの例：</p>
+  <div class="blogcard">
+  <a href="https://www3.nhk.or.jp/news/html/20200620/k10012478151000.html">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://www3.nhk.or.jp/news/html/20200620/K10012478151_2006201800_2006201800_01_02.jpg"
+            alt="東京都 39人の感染確認 夜の繁華街関係者は18人 新型コロナ | NHKニュース"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            東京都 39人の感染確認 夜の繁華街関係者は18人 新型コロナ | NHKニュース
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">【NHK】東京都は、20日、都内で新たに39人が新型コロナウイルスに感染していることが確認されたと発表しました。</div>
+   </div>
+   <div class="blogcard_host">
+       www3.nhk.or.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<h2 id="やったこと">やったこと</h2>
+<h3 id="1-ogpを取得するサーバを作成する">1. OGPを取得するサーバを作成する</h3>
+<p>下記のサイトを参考にしました．</p>
+  <div class="blogcard">
+  <a href="https://nasust.com/hugo/shortcode/blogcard/">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://nasust.com/images/hugo_eyecache_entry_hu5a50c39fd125329a954961d8d9a68f64_32288_1200x0_resize_q90_lanczos_2.png"
+            alt="Hugoでブログカードに対応する | Hugo 入門 / 解説 | nasust dev blog"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Hugoでブログカードに対応する | Hugo 入門 / 解説 | nasust dev blog
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">こんにちはnasustです。 今回は、Hugoでブログカードに対応する方法を紹介します。 私のもう1つのブログは、はてなブログを使用していま …</div>
+   </div>
+   <div class="blogcard_host">
+       nasust.com
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>まず，指定したURLからOGP情報を取得し，JSON形式でレスポンスするサーバを作成します．
+サーバ用のディレクトリを作成し，npmの設定を行い，app.jsを実行します．</p>
+<p>コマンド：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir blog_card
+$ cd $_
+$ npm init
+$ npm install express --save
+$ npm install npm install cheerio-httpcli --save
+$ node app.js
+</code></pre></div><p>app.js：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// import * as express from &#39;express&#39;;
+</span><span style="color:#75715e">// import * as client from &#39;cheerio-httpcli&#39;;
+</span><span style="color:#75715e">// const app = express();
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cheerio-httpcli&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/getogp&#34;</span>, (<span style="color:#a6e22e">expressRequest</span>, <span style="color:#a6e22e">expressResponse</span>, <span style="color:#a6e22e">expressNext</span>) =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">expressRequest</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">url</span>;
+    <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">$</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">body</span>) =&gt; {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) {
+            <span style="color:#a6e22e">expressNext</span>(<span style="color:#a6e22e">err</span>)
+            <span style="color:#66d9ef">return</span>;
+        }
+
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> {
+            <span style="color:#a6e22e">exists</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">site_name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+        }
+
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ogTitleQuery</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:title&#39;]&#34;</span>);
+
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ogTitleQuery</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">exists</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:title&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:description&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:url&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:image&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">site_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:site_name&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:type&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;head title&#34;</span>).<span style="color:#a6e22e">text</span>()
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;description&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+        }
+
+        <span style="color:#a6e22e">expressResponse</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);
+    });
+})
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">6060</span>, () =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Listening on port 6060&#39;</span>));
+</code></pre></div><p>ほとんどコピペさせていただきましたが，下記のエラーが出たため，モジュールのimport方法だけ変更して使用しています．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">import * as express from <span style="color:#e6db74">&#39;express&#39;</span>;
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at wrapSafe <span style="color:#f92672">(</span>internal/modules/cjs/loader.js:1101:16<span style="color:#f92672">)</span>
+    at Module._compile <span style="color:#f92672">(</span>internal/modules/cjs/loader.js:1149:27<span style="color:#f92672">)</span>
+    at Object.Module._extensions..js <span style="color:#f92672">(</span>internal/modules/cjs/loader.js:1205:10<span style="color:#f92672">)</span>
+    at Module.load <span style="color:#f92672">(</span>internal/modules/cjs/loader.js:1034:32<span style="color:#f92672">)</span>
+    at Function.Module._load <span style="color:#f92672">(</span>internal/modules/cjs/loader.js:923:14<span style="color:#f92672">)</span>
+    at Function.executeUserEntryPoint <span style="color:#f92672">[</span>as runMain<span style="color:#f92672">]</span> <span style="color:#f92672">(</span>internal/modules/run_main.js:71:12<span style="color:#f92672">)</span>
+    at internal/main/run_main_module.js:17:47
+</code></pre></div><p>以上の設定により，shortcodeから<code>getJSON http://localhost:6060/getogp?url=WebページのURL</code>を実行することで，OGP情報をJSON形式で取得することができます．</p>
+<h3 id="2-blogcard用のshortcodeを作成する">2. blogcard用のshortcodeを作成する</h3>
+<p>こちらは主に下記のサイトを参考にしました．</p>
+  <div class="blogcard">
+  <a href="https://www.meganii.com/blog/2020/02/02/blogcard-in-hugo/">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://res.cloudinary.com/meganii/image/upload/c_scale,f_auto,q_auto,w_300/v1514036568/thumbnail_hugo_icon.png"
+            alt="HugoでAMP対応のブログカードを作る - SIS Lab"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            HugoでAMP対応のブログカードを作る - SIS Lab
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">「Hugoでもブログカードを利用したい」そう考えているところに以下の記事がTwitterのTLで流れてきたので、試してみました。Hugoでブ …</div>
+   </div>
+   <div class="blogcard_host">
+       www.meganii.com
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>下記のファイルを<code>layouts/shortcodes/blogcard.html</code>に作成します．</p>
+<p>blogcard.html:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- blogcard.html --&gt;</span>
+{{ $url := ( .Get 0) }}
+{{ $function := print &#34;http://localhost:6060/getogp?&#34; (querify &#34;url&#34; $url )}}
+{{ $ogpjson := getJSON $function }}
+
+{{ $urlp := urls.Parse $url }}
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard&#34;</span>&gt;
+  &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $ogpjson.url }}&#34;</span>&gt;
+   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_thumbnail&#34;</span>&gt; 
+        &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_img&#34;</span>
+            <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $ogpjson.image }}&#34;</span>
+            <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $ogpjson.title }}&#34;</span>
+            <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span>
+            <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_content&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_title&#34;</span>&gt; 
+        &lt;<span style="color:#f92672">strong</span>&gt;
+            {{ $ogpjson.title | truncate 50}}
+        &lt;/<span style="color:#f92672">strong</span>&gt;            
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_excerpt&#34;</span>&gt;{{ $ogpjson.description | truncate 70}}&lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blogcard_host&#34;</span>&gt;
+       {{ $urlp.Host }}
+   &lt;/<span style="color:#f92672">div</span>&gt;
+   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clear&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">a</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>こちらもほぼコピペですが，下記の点に変更を加えています．</p>
+<ul>
+<li>「3.レスポンシブなブログカード用にCSSを設定」に合わせて出力HTMLの部分を書き換え</li>
+<li>URLからホスト名を取得し，表示する機能を追加</li>
+<li>タイトルの上限文字数を50文字に制限</li>
+</ul>
+<h3 id="3-レスポンシブなブログカード用にcssを設定">3. レスポンシブなブログカード用にCSSを設定</h3>
+<p>下記のサイトを参考にしました．</p>
+  <div class="blogcard">
+  <a href="https://dis-play.net/wordpress/tips/blogcard/">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://dis-play.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png"
+            alt="コピペで簡単設置！内部リンクのブログカードを作成する方法【PV・回遊率アップに貢献】 | DISPLAY"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            コピペで簡単設置！内部リンクのブログカードを作成する方法【PV・回遊率アップに貢献】 | …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">ブログカードとは、ページ内に内部リンクを貼る際にアイキャッチ画像と記事タイトル・テキストなどの要素を1枚のカードのようにまとめて装飾したリン …</div>
+   </div>
+   <div class="blogcard_host">
+       dis-play.net
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>下記の記述を<code>static/css/custom.css</code>に追加します．</p>
+<p>custom.css:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* custom.css */</span>
+.<span style="color:#a6e22e">blogcard</span> {
+  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#ffffff</span>;
+  <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#eeeeee</span>;
+  <span style="color:#66d9ef">word-wrap</span>: <span style="color:#66d9ef">break-word</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.025</span>);
+  <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
+}
+.<span style="color:#a6e22e">blogcard</span> <span style="color:#f92672">a</span> {
+  <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+  <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">1</span>;
+  <span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">all</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span> <span style="color:#66d9ef">ease</span>;
+}
+.<span style="color:#a6e22e">blogcard</span> <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0.6</span>;
+}
+.<span style="color:#a6e22e">blogcard_thumbnail</span> {
+  <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">left</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">padding-right</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+
+.<span style="color:#a6e22e">blogcard_title</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bold</span>;
+  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1.4</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">17</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;  
+  <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">black</span>;
+}
+.<span style="color:#a6e22e">blogcard_excerpt</span> {
+  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.9</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">1.6</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">17</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">color</span>:<span style="color:#66d9ef">black</span>;
+  <span style="color:#66d9ef">opacity</span>:<span style="color:#ae81ff">0.5</span>;
+}
+
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">screen</span> <span style="color:#f92672">and</span> <span style="color:#f92672">(</span><span style="color:#f92672">max-width</span><span style="color:#f92672">:</span> <span style="color:#f92672">768px</span><span style="color:#f92672">)</span> {
+  .<span style="color:#a6e22e">blogcard</span> {
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">40</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+  }
+  .<span style="color:#a6e22e">blogcard_title</span> {
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">0.9</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">padding-bottom</span>: <span style="color:#ae81ff">17</span><span style="color:#66d9ef">px</span>;
+  }
+  .<span style="color:#a6e22e">blogcard_excerpt</span>  {
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">none</span>;
+  }
+  .<span style="color:#a6e22e">blogcard_img</span>{
+    <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">px</span>;
+  }
+</code></pre></div><p>こちらについても，元サイトから一部変更を行っています．</p>
+<ul>
+<li>フォント色の変更（黒）</li>
+<li>@mediaで画像のサイズを変更
+等</li>
+</ul>
+<h3 id="4-記事内でショートコードを使用する">4. 記事内でショートコードを使用する</h3>
+<p>下記のように記載することで，簡単にレスポンシブなブログカードを追加することができます．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{％ blogcard &#34;https://dis-play.net/wordpress/tips/blogcard/&#34; ％}}
+</code></pre></div><h2 id="iframelyは利用を中断">iframelyは利用を中断</h2>
+<p>下の記事で書いた通り，しばらくiframelyでブログカードを作成していました．</p>
+  <div class="blogcard">
+  <a href="">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src=""
+            alt="nyakapokoのブログ - iframelyでURLをまとめて埋め込む "
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            nyakapokoのブログ - iframelyでURLをまとめて埋め込む 
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">nyakapokoのブログ - やりたいこと このサイトでは，URLの埋め込みにiframelyを使っています． 複数のURLを埋め込みたい …</div>
+   </div>
+   <div class="blogcard_host">
+       nyakapoko.github.io
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>しかし，iframelyの無料プランには，<strong>1000 hits/月という制限があります</strong>．
+今回，利用開始の初月に，早くもこの制限に引っかかってしまったため，別の方法を探すことにしました．</p>
+<ul>
+<li>毎月29ドル：10,000hits/月</li>
+<li>毎月49ドル：50,000hits/月</li>
+<li>毎月99ドル：150,000hits/月</li>
+<li>毎月399ドル：1,000,000hits/月</li>
+</ul>
+<p>というプランもありますが，お金をかけ始めると際限なさそうなので，<strong>今回は無料でできる方法を試すことにしました．</strong></p>
+  <div class="blogcard">
+  <a href="https://iframely.com/plans">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://iframely.com/r2/v308/img/thumbnail-iframely.jpg"
+            alt="Pricing - Iframely Embeds API"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Pricing - Iframely Embeds API
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Simple API gives you responsive embed codes for videos, photos, …</div>
+   </div>
+   <div class="blogcard_host">
+       iframely.com
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<h2 id="今後の課題">今後の課題</h2>
+<ul>
+<li>Amazonの商品はOGP情報から画像が取得できない．Amazonの商品リンク用のshortcodeを作成する．</li>
+<li>CSSの一部修正</li>
+</ul>
+
+
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/share?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f13_hugo_blogcard%2f&text=Hugo%e3%81%a7%e3%83%ac%e3%82%b9%e3%83%9d%e3%83%b3%e3%82%b7%e3%83%96%e3%81%aa%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" title="Tweet"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f13_hugo_blogcard%2f&title=Hugo%e3%81%a7%e3%83%ac%e3%82%b9%e3%83%9d%e3%83%b3%e3%82%b7%e3%83%96%e3%81%aa%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fnyakapoko.github.io%2fpost%2f13_hugo_blogcard%2f&t=Hugo%e3%81%a7%e3%83%ac%e3%82%b9%e3%83%9d%e3%83%b3%e3%82%b7%e3%83%96%e3%81%aa%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f13_hugo_blogcard%2f&title=Hugo%e3%81%a7%e3%83%ac%e3%82%b9%e3%83%9d%e3%83%b3%e3%82%b7%e3%83%96%e3%81%aa%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b" target="_blank" title="pocket"><i class="fa fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nyakapokos" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+            </div>
+        </div>
+
+        
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <h1 class="single-title">Relevant Topics</h1>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/09_iframely_multi/">
+                                <h2 class="">iframelyでURLをまとめて埋め込む</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/iframely/">
+            <span class="layui-badge" style="vertical-align: 2px;">iframely</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/08_eyecatch_eachpage/">
+                                <h2 class="">Hugoでページごとにアイキャッチ画像を指定する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f/">
+            <span class="layui-badge" style="vertical-align: 2px;">アイキャッチ画像</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/07_monospace_browser/">
+                                <h2 class="">monospaceフォントはChromeとSafariでかなり違う</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88/">
+            <span class="layui-badge" style="vertical-align: 2px;">フォント</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブラウザ</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/03_hugo_erblog_thumbnail/">
+                                <h2 class="">Hugo(erblog)でサムネイル画像を指定する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-04-30</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/erblog/">
+            <span class="layui-badge" style="vertical-align: 2px;">erblog</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

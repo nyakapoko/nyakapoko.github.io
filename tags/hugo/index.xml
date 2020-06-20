@@ -6,10 +6,19 @@
     <description>Recent content in Hugo on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 04 May 2020 12:08:33 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2020 23:34:14 +0900</lastBuildDate>
     
 	<atom:link href="https://nyakapoko.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugoでレスポンシブなブログカードを作成する</title>
+      <link>https://nyakapoko.github.io/post/13_hugo_blogcard/</link>
+      <pubDate>Sat, 20 Jun 2020 23:34:14 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/post/13_hugo_blogcard/</guid>
+      <description>やりたいこと Hugo でブログカードを作成したい レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい） レスポンシブなブ</description>
+    </item>
     
     <item>
       <title>iframelyでURLをまとめて埋め込む</title>
