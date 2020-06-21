@@ -1,0 +1,828 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>nyakapokoのブログ - HugoでAmazonのブログカード作成 </title>
+
+    
+    
+    <meta content="Hugo, ブログカード, 技術" name="keywords">
+    
+    <meta content="nyakapokoのブログ - やりたいこと HugoでAmazonのリンクをブログカードで表示したい 商品画像込で表示したい レスポンシブなデザインにしたい（スマートフォンで見" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93938196-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-93938196-3');
+        </script>
+    
+
+    
+    
+    <script type="text/javascript" async
+        src="/mathjax-3.0.0/tex-mml-chtml.js">
+    </script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.min.css">
+    
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    <link rel="stylesheet" async href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <script src="/self/js/lazysizes.min.js" async></script> 
+
+<meta name="thumbnail" content="https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/eyecatch.jpg"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<title>HugoでAmazonのブログカード作成</title>
+<meta property="og:title" content="HugoでAmazonのブログカード作成" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:description" content="やりたいこと HugoでAmazonのリンクをブログカードで表示したい 商品画像込で表示したい レスポンシブなデザインにしたい（スマートフォンで見" />
+<meta property="og:image" content="https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/eyecatch.jpg" />
+<meta property="og:site_name" content="nyakapokoのブログ" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/" />
+<meta name="twitter:site" content="@nyakapoko1" />
+<meta name="twitter:creator" content="@nyakapoko1" /> 
+
+
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+
+
+
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+
+
+
+
+
+
+
+
+<script data-ad-client="ca-pub-6813906514142019" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    
+
+</head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/self/img/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        nyakapokoのブログ
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">全記事</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E6%8A%80%E8%A1%93">技術</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E8%80%83%E3%81%88%E6%96%B9">考え方</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">全記事</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a></dd>
+                    
+                        <dd><a href="/categories/%E6%8A%80%E8%A1%93">技術</a></dd>
+                    
+                        <dd><a href="/categories/%E8%80%83%E3%81%88%E6%96%B9">考え方</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="layui-elem-quote markdown-body single-title" >
+                    <h1>HugoでAmazonのブログカード作成</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-06-22</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブログカード</span>
+        </a>
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2>目次<h2><nav id="TableOfContents">
+  <ul>
+    <li><a href="#やりたいこと">やりたいこと</a></li>
+    <li><a href="#やったこと">やったこと</a>
+      <ul>
+        <li><a href="#1-レスポンシブなブログカードを作成可能にする">1. レスポンシブなブログカードを作成可能にする</a></li>
+        <li><a href="#2-amazon-pa-api-v5を使用可能にする">2. Amazon PA-API (v5)を使用可能にする</a></li>
+        <li><a href="#3-ogpを取得するサーバにamazonリンク用の機能を追加する">3. OGPを取得するサーバに，Amazonリンク用の機能を追加する</a></li>
+      </ul>
+    </li>
+    <li><a href="#他に検討した方法断念した理由">他に検討した方法/断念した理由</a>
+      <ul>
+        <li><a href="#asinから画像urlを取得する">ASINから画像URLを取得する</a></li>
+        <li><a href="#既存のwebアプリを使用してasinから商品情報を取得する">既存のwebアプリを使用してASINから商品情報を取得する</a></li>
+      </ul>
+    </li>
+    <li><a href="#作成したリンクの例">作成したリンクの例</a></li>
+    <li><a href="#今後の課題">今後の課題</a></li>
+  </ul>
+</nav>
+                    
+
+
+<div class="eyecatch" style="text-align:center;margin-top:-10px;margin-bottom:50px;">
+  <img
+    src="/img/14_eyecatch.jpg"
+    alt=""
+    decoding="async"
+    width="70%"
+    style="box-shadow:0 0 1px gray;"
+  />
+</div>
+<h2 id="やりたいこと">やりたいこと</h2>
+<ul>
+<li>HugoでAmazonのリンクをブログカードで表示したい</li>
+<li>商品画像込で表示したい</li>
+<li>レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい）</li>
+</ul>
+<p>作成したAmazonブログカードの例：</p>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B07PFFMQ64/ref=as_li_ss_tl?pf_rd_r=VWAYXDJ50VYR35H9D30X&amp;pf_rd_p=4f38ec65-1db9-4c32-b95a-5a3f427de3c3&amp;linkCode=sl1&amp;tag=nhojo-22&amp;linkId=26b421b6575cfbe3fed92f3895e5fb3c&amp;language=ja_JP">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="http://images-jp.amazon.com/images/P/B07PFFMQ64.09.jpg"
+            alt="Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー with Alexa、チャコール: Kindleストア"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー with Alexa、チャコール: …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<h2 id="やったこと">やったこと</h2>
+<h3 id="1-レスポンシブなブログカードを作成可能にする">1. レスポンシブなブログカードを作成可能にする</h3>
+<p>以前の記事で，Hugoでレスポンシブなブログカードを作成する方法を書きました．
+以前の記事の方法をベースに，この記事ではAmazonの商品リンクを作成します．</p>
+  <div class="blogcard">
+  <a href="https://nyakapoko.github.io/post/13_hugo_blogcard/">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://nyakapoko.github.io/post/13_hugo_blogcard/eyecatch.jpg"
+            alt="Hugoでレスポンシブなブログカードを作成する"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Hugoでレスポンシブなブログカードを作成する
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">やりたいこと Hugo でブログカードを作成したい レスポンシブなデザインにしたい（スマートフォンで見たときに画像サイズ等を変更したい） レ …</div>
+   </div>
+   <div class="blogcard_host">
+       nyakapoko.github.io
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>上記の方法でAmazon商品のリンクを作成した場合の問題として，<strong>商品画像が表示されない</strong>ことがありました．
+原因は，</p>
+<ul>
+<li>上記の方法では，画像はOGP情報（HTMLのヘッダ部分の &lsquo;og:image&rsquo;）から抽出している</li>
+<li>Amazonの商品ページには，OGP情報やog:imageの設定がされていない</li>
+</ul>
+<p>ということだと思います．</p>
+<h3 id="2-amazon-pa-api-v5を使用可能にする">2. Amazon PA-API (v5)を使用可能にする</h3>
+<p>今回は，Amazonの商品画像を取得するために，<a href="https://affiliate.amazon.co.jp/assoc_credentials/home">PA-API (v5)</a>を使用します（理由の補足は後述）．</p>
+<p>PA-APIの使用方法については，下記のサイトを参考にしました．
+前回の記事では，OGP情報取得のサーバをNodeで書いたので，PA-API情報取得もNodeで一緒に行うことにしました．</p>
+  <div class="blogcard">
+  <a href="https://photo-tea.com/p/1803/amazon-how-to-itemlookup-nodejs/">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://farm5.staticflickr.com/4154/5022680244_8a34b71159_b.jpg"
+            alt="Node.jsでAmazonアフィリエイトの商品URLコードを取得する方法"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Node.jsでAmazonアフィリエイトの商品URLコードを取得する方法
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazonのアフィリエイト商品情報をASINから取得するプログラムをNode.js(javascript)で書いてみました。使用するAPI …</div>
+   </div>
+   <div class="blogcard_host">
+       photo-tea.com
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>上のサイトの通りでほぼ問題ないのですが，PA-APIについて，<a href="https://qiita.com/YKInoMT/items/667475a3746f9c107733">「429エラーになる」という問題</a>が報告されています．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">HTTP Status: 429: Too Many Requests
+The request was denied due to request throttling. Please verify the number of requests made per second to the Amazon Product Advertising API.
+</code></pre></div><p>私の場合も（最初から）このエラーが出ました．
+数時間放置して再挑戦すると，通るようになりました．
+認証キーを取得してからすぐにAPIを叩くと，上記のエラーが出るのかもしれません．</p>
+<h3 id="3-ogpを取得するサーバにamazonリンク用の機能を追加する">3. OGPを取得するサーバに，Amazonリンク用の機能を追加する</h3>
+<p><a href="https://nyakapoko.github.io/post/13_hugo_blogcard/">前回の記事</a>のapp.jsを下記のように変更しました．
+3行目でインポートしている<code>'./src/index</code>は，<a href="https://webservices.amazon.com/paapi5/documentation/quick-start/using-sdk.html">PA-APIのSDK(node)</a>内にあるソースのディレクトリです．
+Node超初心者としては，非同期関数<code>api.getItems()</code>から取得した情報を<code>expressResponse</code>に渡す方法に苦労しました．
+最終的には，<a href="https://qiita.com/hisatoshi/items/ba984ad6356ad9405b11">クロージャを使う方法</a>を参考にすることで，なんとか解決しました．</p>
+  <div class="blogcard">
+  <a href="https://qiita.com/hisatoshi/items/ba984ad6356ad9405b11">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-1150d8b18a7c15795b701a55ae908f94.png?ixlib=rb-1.2.2&amp;w=1200&amp;mark=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D380%26txt%3DPromise%25E3%2581%25AB%25E3%2581%25AF%25E3%2582%25AF%25E3%2583%25AD%25E3%2583%25BC%25E3%2582%25B8%25E3%2583%25A3%25E3%2581%25A7%25E5%2580%25A4%25E3%2582%2592%25E6%25B8%25A1%25E3%2581%259B%25E3%2581%25B0%25E3%2582%2588%25E3%2581%258B%25E3%2581%25A3%25E3%2581%259F%26txt-color%3D%2523333%26txt-font%3DAvenir-Black%26txt-size%3D54%26txt-clip%3Dellipsis%26txt-align%3Dcenter%252Cmiddle%26s%3D7e81f0dd37d678d1d1f3616a384f9b03&amp;mark-align=center%2Cmiddle&amp;blend=https%3A%2F%2Fqiita-user-contents.imgix.net%2F~text%3Fixlib%3Drb-1.2.2%26w%3D840%26h%3D500%26txt%3D%2540hisatoshi%26txt-color%3D%2523333%26txt-font%3DAvenir-Black%26txt-size%3D45%26txt-align%3Dright%252Cbottom%26s%3D4bd0a7fee3b5bd9843e9f41e87d09ff8&amp;blend-align=center%2Cmiddle&amp;blend-mode=normal&amp;s=9765a2e9014dc36b66933f9e732bdf92"
+            alt="Promiseにはクロージャで値を渡せばよかった - Qiita"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Promiseにはクロージャで値を渡せばよかった - Qiita
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">
+<p>追記</p>
+<p>例が悪かったので，修正．
+fugafugaがグローバル変数になってた</p>
+<p>こんな感じのことがしたい</p>
+<p>function …</div></p>
+   </div>
+   <div class="blogcard_host">
+       qiita.com
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<p>また，現時点ではまだ例外処理等は十分に書けていません．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//app.js
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">express</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">client</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cheerio-httpcli&#39;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ProductAdvertisingAPIv1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./src/index&#39;</span>);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">express</span>();
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">parseResponse</span>(<span style="color:#a6e22e">itemsResponseList</span>) {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mappedResponse</span> <span style="color:#f92672">=</span> {};
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">itemsResponseList</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">itemsResponseList</span>.<span style="color:#a6e22e">hasOwnProperty</span>(<span style="color:#a6e22e">i</span>)) {
+      <span style="color:#a6e22e">mappedResponse</span>[<span style="color:#a6e22e">itemsResponseList</span>[<span style="color:#a6e22e">i</span>][<span style="color:#e6db74">&#39;ASIN&#39;</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">itemsResponseList</span>[<span style="color:#a6e22e">i</span>];
+    }
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">mappedResponse</span>;
+}
+
+<span style="color:#75715e">// PA-APIの応答（data）から画像URLを抽出し，応答する
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">resolver</span>(<span style="color:#a6e22e">result</span>,<span style="color:#a6e22e">expressResponse</span>,<span style="color:#a6e22e">getItemsRequest</span>){
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">data</span>) {
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getItemsResponse</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ProductAdvertisingAPIv1</span>.<span style="color:#a6e22e">GetItemsResponse</span>.<span style="color:#a6e22e">constructFromObject</span>(<span style="color:#a6e22e">data</span>);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">response_list</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">parseResponse</span>(<span style="color:#a6e22e">getItemsResponse</span>[<span style="color:#e6db74">&#39;ItemsResult&#39;</span>][<span style="color:#e6db74">&#39;Items&#39;</span>]);
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">itemId</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;ItemIds&#39;</span>][<span style="color:#ae81ff">0</span>];
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">response_list</span>[<span style="color:#a6e22e">itemId</span>];
+      <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>[<span style="color:#e6db74">&#34;Images&#34;</span>][<span style="color:#e6db74">&#34;Primary&#34;</span>][<span style="color:#e6db74">&#39;Medium&#39;</span>][<span style="color:#e6db74">&#39;URL&#39;</span>];
+      <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">item</span>[<span style="color:#e6db74">&#39;DetailPageURL&#39;</span>];
+      <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">img</span>;
+      <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+      <span style="color:#a6e22e">expressResponse</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);
+    }
+}
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/getogp&#34;</span>, (<span style="color:#a6e22e">expressRequest</span>, <span style="color:#a6e22e">expressResponse</span>, <span style="color:#a6e22e">expressNext</span>) =&gt; {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">expressRequest</span>.<span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">url</span>;
+    <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">url</span>, (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">$</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">body</span>) =&gt; {
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span>) {
+            <span style="color:#a6e22e">expressNext</span>(<span style="color:#a6e22e">err</span>)
+            <span style="color:#66d9ef">return</span>;
+        }
+
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">docInfo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>.<span style="color:#a6e22e">documentInfo</span>();
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url_redirected</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">docInfo</span>.<span style="color:#a6e22e">url</span>;
+        <span style="color:#75715e">// console.log(url_redirected);
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> {
+            <span style="color:#a6e22e">exists</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+            <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">image</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">site_name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+            <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;&#34;</span>,
+        }
+
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ogTitleQuery</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:title&#39;]&#34;</span>);
+        <span style="color:#75715e">// console.log(ogTitleQuery)
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// console.log(ogTitleQuery.length)        
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">ogTitleQuery</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">exists</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:title&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:description&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:url&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">image</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:image&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">site_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:site_name&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[property=&#39;og:type&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">expressResponse</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);                        
+
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">url_redirected</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;https://www.amazon.co.jp/&#39;</span>) <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>) {
+        	 <span style="color:#75715e">// Amazon用機能
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">exists</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;title&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;description&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">site_name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://www.amazon.co.jp/&#39;</span>;
+
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url_split</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url_redirected</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;dp/&#39;</span>)[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;/&#39;</span>)[<span style="color:#ae81ff">0</span>];
+            <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">asin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url_split</span>;
+
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">defaultClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ProductAdvertisingAPIv1</span>.<span style="color:#a6e22e">ApiClient</span>.<span style="color:#a6e22e">instance</span>;
+            <span style="color:#a6e22e">defaultClient</span>.<span style="color:#a6e22e">accessKey</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(PA-APIのアクセスキー)&#39;</span>;            
+            <span style="color:#a6e22e">defaultClient</span>.<span style="color:#a6e22e">secretKey</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(PA-APIの秘密鍵)&#39;</span>;            
+            <span style="color:#a6e22e">defaultClient</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;webservices.amazon.co.jp&#34;</span>;
+            <span style="color:#a6e22e">defaultClient</span>.<span style="color:#a6e22e">region</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;us-west-2&#39;</span>;
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">api</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ProductAdvertisingAPIv1</span>.<span style="color:#a6e22e">DefaultApi</span>();
+            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">getItemsRequest</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ProductAdvertisingAPIv1</span>.<span style="color:#a6e22e">GetItemsRequest</span>();
+            <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;PartnerTag&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;(アソシエイトID)&#39;</span>;
+            <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;PartnerType&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Associates&#39;</span>;
+            <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;ItemIds&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">asin</span>];
+            <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;Condition&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;New&#39;</span>;
+            <span style="color:#a6e22e">getItemsRequest</span>[<span style="color:#e6db74">&#39;Resources&#39;</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Images.Primary.Medium&#39;</span>,<span style="color:#e6db74">&#39;Offers.Listings.Price&#39;</span>]; <span style="color:#75715e">//, &#39;ItemInfo.Title&#39;, &#39;Offers.Listings.Price&#39;];
+</span><span style="color:#75715e"></span>
+            <span style="color:#a6e22e">api</span>.<span style="color:#a6e22e">getItems</span>(<span style="color:#a6e22e">getItemsRequest</span>).<span style="color:#a6e22e">then</span>(
+                    <span style="color:#a6e22e">resolver</span>(<span style="color:#a6e22e">result</span>,<span style="color:#a6e22e">expressResponse</span>,<span style="color:#a6e22e">getItemsRequest</span>));
+
+        }<span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;head title&#34;</span>).<span style="color:#a6e22e">text</span>();
+            <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$</span>(<span style="color:#e6db74">&#34;meta[name=&#39;description&#39;]&#34;</span>).<span style="color:#a6e22e">attr</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+            <span style="color:#a6e22e">expressResponse</span>.<span style="color:#a6e22e">json</span>(<span style="color:#a6e22e">result</span>);            
+        }
+
+        <span style="color:#75715e">// expressResponse.json(result);
+</span><span style="color:#75715e"></span>    });
+
+})
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">listen</span>(<span style="color:#ae81ff">6060</span>, () =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Listening on port 6060&#39;</span>));
+</code></pre></div><p>上記のアプリを<code>http://localhost:6060</code>に立ち上げ，shortcodeから<code>getJSON http://localhost:6060?url=(Amazonの商品URL)</code>とします．
+これにより，商品の情報を持つjsonをshortcode内で取得できます．</p>
+<h2 id="他に検討した方法断念した理由">他に検討した方法/断念した理由</h2>
+<h3 id="asinから画像urlを取得する">ASINから画像URLを取得する</h3>
+<p><strong>画像が取得できない商品がありました．</strong></p>
+<p><a href="https://www.ipentec.com/document/internet-get-amazon-product-image">ASINから画像URLを取得する方法</a>では，例えば下記のURLを商品画像として使用します．</p>
+<p><code>https://images-na.ssl-images-amazon.com/images/P/${ASIN}.09.MZZZZZZZ.jpg</code></p>
+<p>しかし，リンク先にも記載されている通り，一部の商品ではこの方法では画像が取得できません．</p>
+<blockquote>
+<p>一部の商品では、上記のURLから画像を取得できない場合があります。画像が取得できない商品については、&ldquo;Amazon Product Advertising API&quot;を利用して画像を取得する必要があります。</p>
+</blockquote>
+<h3 id="既存のwebアプリを使用してasinから商品情報を取得する">既存のwebアプリを使用してASINから商品情報を取得する</h3>
+<p>例えば，<a href="https://blog.longkey1.net/2017/10/01/hugo-amazon-shortcode/">このブログ</a>では，
+<a href="https://github.com/longkey1/amazon-pa-api-proxy/">amazon-product-json</a>というWebアプリを使用してAmazonの商品を表示する方法が紹介されています．
+しかし，ブログの執筆が2017年であり， <strong>PA-APIのv5に対応したものではないと思われるため，</strong> 今回新たにv5に対応した方法を紹介しました．</p>
+<h2 id="作成したリンクの例">作成したリンクの例</h2>
+<p>Amazonから商品をランダムに選択してみました．</p>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B07PFFMQ64/ref=as_li_ss_tl?pf_rd_r=VWAYXDJ50VYR35H9D30X&amp;pf_rd_p=4f38ec65-1db9-4c32-b95a-5a3f427de3c3&amp;linkCode=sl1&amp;tag=nhojo-22&amp;linkId=26b421b6575cfbe3fed92f3895e5fb3c&amp;language=ja_JP">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="http://images-jp.amazon.com/images/P/B07PFFMQ64.09.jpg"
+            alt="Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー with Alexa、チャコール: Kindleストア"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazon.co.jp： Echo Dot (エコードット)第3世代 - スマートスピーカー with Alexa、チャコール: …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B07ZSGSN9S/ref=as_li_ss_tl?&amp;th=1&amp;psc=1&amp;linkCode=sl1&amp;tag=nhojo-22&amp;linkId=92f4f2782e92e30fd55c2e4c344e420d&amp;language=ja_JP">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="http://images-jp.amazon.com/images/P/B07ZSGSN9S.09.jpg"
+            alt="Python実践データ分析100本ノック | 下山輝昌, 松田雄馬, 三木孝行 | 工学 | Kindleストア | Amazon"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Python実践データ分析100本ノック | 下山輝昌, 松田雄馬, 三木孝行 | 工学 | …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazonで下山輝昌, 松田雄馬, 三木孝行の{ProductTitle}。アマゾンならポイント還元本が多数。一度購入いただいた電子書籍 …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B07YNNXTSM?tag=nhojo-22&amp;linkCode=ogi&amp;th=1&amp;psc=1">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://m.media-amazon.com/images/I/31ELcAR0M4L._SL160_.jpg"
+            alt="Amazon | Dell デスクトップパソコン Inspiron 3471 Core i5 ブラック 20Q32/Win10/8GB/1TB HDD | Dell | パソコン・周辺機器 通販"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon | Dell デスクトップパソコン Inspiron 3471 Core i5 ブラッ …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Dell デスクトップパソコン Inspiron 3471 Core i5 ブラック 20Q32/Win10/8GB/1TB HDDがパソコ …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/480030525X?tag=nhojo-22&amp;linkCode=ogi&amp;th=1&amp;psc=1">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://m.media-amazon.com/images/I/51kJs1a0p9L._SL160_.jpg"
+            alt="空想世界構築教典 完全版 | 宮永 忠将 |本 | 通販 | Amazon"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            空想世界構築教典 完全版 | 宮永 忠将 |本 | 通販 | Amazon
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazonで宮永 忠将の空想世界構築教典 完全版。アマゾンならポイント還元本が多数。宮永 忠将作品ほか、お急ぎ便対象商品は当日お届けも可 …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B07F6BYTGL?tag=nhojo-22&amp;linkCode=ogi&amp;th=1&amp;psc=1">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://m.media-amazon.com/images/I/51fqvmZJNaL._SL160_.jpg"
+            alt="Amazon | AMAA ミニ　財布　レディース　コインケース　PU　猫顔柄　小銭入れ　キー入れポーチ　薬　イヤホン　ケーブル収納　バッグ　ポーチ　ベージュ　黒　格子　グレー (黒) | chenrui | 小銭入れ"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon | AMAA ミニ　財布　レディース　コインケース　PU　猫顔柄　小銭入れ　キー入れ …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">AMAA ミニ　財布　レディース　コインケース　PU　猫顔柄　小銭入れ　キー入れポーチ　薬　イヤホン　ケーブル収納　バッグ　ポーチ　ベー …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B005MN8YBM?tag=nhojo-22&amp;linkCode=ogi&amp;th=1&amp;psc=1">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://m.media-amazon.com/images/I/41VXw3bL1oL._SL160_.jpg"
+            alt="Amazon.co.jp： ニールズヤード レメディーズ ヘアブラシ(小): ラグジュアリービューティー"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon.co.jp： ニールズヤード レメディーズ ヘアブラシ(小): ラグジュアリービューテ …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">Amazon.co.jp： ニールズヤード レメディーズ ヘアブラシ(小): ラグジュアリービューティー</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+  <div class="blogcard">
+  <a href="https://www.amazon.co.jp/dp/B0000CE5FW?tag=nhojo-22&amp;linkCode=ogi&amp;th=1&amp;psc=1">
+   <div class="blogcard_thumbnail"> 
+        <img class="blogcard_img"
+            src="https://m.media-amazon.com/images/I/31gG81vq0xL._SL160_.jpg"
+            alt="Amazon | エレコム LANケーブル 10m スーパーフラット CAT6準拠 シルバー LD-GF/SV10 | エレコム | LANケーブル 通販"
+            width="150"
+            height="150">
+    </div>
+   <div class="blogcard_content">
+    <div class="blogcard_title"> 
+        <strong>
+            Amazon | エレコム LANケーブル 10m スーパーフラット CAT6準拠 シルバー …
+        </strong>            
+    </div>
+    <div class="blogcard_excerpt">エレコム LANケーブル 10m スーパーフラット CAT6準拠 シルバー LD-GF/SV10がLANケーブルストアでいつでもお買い得。当 …</div>
+   </div>
+   <div class="blogcard_host">
+       www.amazon.co.jp
+   </div>
+   <div class="clear"></div>
+  </a>
+  </div>
+<h2 id="今後の課題">今後の課題</h2>
+<ul>
+<li>app.jsを整理する</li>
+</ul>
+
+
+
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/share?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f14_hugo_blogcard_amazon%2f&text=Hugo%e3%81%a7Amazon%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e4%bd%9c%e6%88%90" target="_blank" title="Tweet"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f14_hugo_blogcard_amazon%2f&title=Hugo%e3%81%a7Amazon%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e4%bd%9c%e6%88%90" target="_blank" title="hatena"><i class="fa fa-hatena"></i></i></a>
+      </div>      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fnyakapoko.github.io%2fpost%2f14_hugo_blogcard_amazon%2f&t=Hugo%e3%81%a7Amazon%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e4%bd%9c%e6%88%90" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fnyakapoko.github.io%2fpost%2f14_hugo_blogcard_amazon%2f&title=Hugo%e3%81%a7Amazon%e3%81%ae%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89%e4%bd%9c%e6%88%90" target="_blank" title="pocket"><i class="fa fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "nyakapokos" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div>
+            </div>
+        </div>
+
+        
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <h1 class="single-title">Relevant Topics</h1>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/13_hugo_blogcard/">
+                                <h2 class="">Hugoでレスポンシブなブログカードを作成する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-06-20</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%ad%e3%82%b0%e3%82%ab%e3%83%bc%e3%83%89/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブログカード</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/09_iframely_multi/">
+                                <h2 class="">iframelyでURLをまとめて埋め込む</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/iframely/">
+            <span class="layui-badge" style="vertical-align: 2px;">iframely</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/08_eyecatch_eachpage/">
+                                <h2 class="">Hugoでページごとにアイキャッチ画像を指定する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%82%a2%e3%82%a4%e3%82%ad%e3%83%a3%e3%83%83%e3%83%81%e7%94%bb%e5%83%8f/">
+            <span class="layui-badge" style="vertical-align: 2px;">アイキャッチ画像</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/07_monospace_browser/">
+                                <h2 class="">monospaceフォントはChromeとSafariでかなり違う</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-05-04</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/%e3%83%95%e3%82%a9%e3%83%b3%e3%83%88/">
+            <span class="layui-badge" style="vertical-align: 2px;">フォント</span>
+        </a>
+    
+        <a href="/tags/%e3%83%96%e3%83%a9%e3%82%a6%e3%82%b6/">
+            <span class="layui-badge" style="vertical-align: 2px;">ブラウザ</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/03_hugo_erblog_thumbnail/">
+                                <h2 class="">Hugo(erblog)でサムネイル画像を指定する</h2>
+                            </a>
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 24px; vertical-align: -2px;"></i>
+    <span>2020-04-30</span>
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 0px;"></i>
+    
+        <a href="/tags/tips/">
+            <span class="layui-badge" style="vertical-align: 2px;">tips</span>
+        </a>
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/erblog/">
+            <span class="layui-badge" style="vertical-align: 2px;">erblog</span>
+        </a>
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

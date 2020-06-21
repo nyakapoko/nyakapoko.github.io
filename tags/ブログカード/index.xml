@@ -6,10 +6,19 @@
     <description>Recent content in ブログカード on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 20 Jun 2020 23:34:14 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 01:06:49 +0900</lastBuildDate>
     
 	<atom:link href="https://nyakapoko.github.io/tags/%E3%83%96%E3%83%AD%E3%82%B0%E3%82%AB%E3%83%BC%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HugoでAmazonのブログカード作成</title>
+      <link>https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/</link>
+      <pubDate>Mon, 22 Jun 2020 01:06:49 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/post/14_hugo_blogcard_amazon/</guid>
+      <description>やりたいこと HugoでAmazonのリンクをブログカードで表示したい 商品画像込で表示したい レスポンシブなデザインにしたい（スマートフォンで見</description>
+    </item>
     
     <item>
       <title>Hugoでレスポンシブなブログカードを作成する</title>
