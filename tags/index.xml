@@ -6,10 +6,19 @@
     <description>Recent content in Tags on nyakapokoのブログ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Mon, 22 Jun 2020 01:06:49 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jun 2020 22:06:20 +0900</lastBuildDate>
     
 	<atom:link href="https://nyakapoko.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>書評</title>
+      <link>https://nyakapoko.github.io/tags/%E6%9B%B8%E8%A9%95/</link>
+      <pubDate>Thu, 25 Jun 2020 22:06:20 +0900</pubDate>
+      
+      <guid>https://nyakapoko.github.io/tags/%E6%9B%B8%E8%A9%95/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Hugo</title>
